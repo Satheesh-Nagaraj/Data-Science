@@ -1,0 +1,3 @@
+temp = int(input())
+far = 1.8*(temp)+32
+print(round(far,2))
