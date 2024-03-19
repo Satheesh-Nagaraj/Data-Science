@@ -1,0 +1,4 @@
+P,T,R = map(float,input().split(" "))
+si=(P*T*R)/100
+output= "{:.2f}".format(si)
+print(output)
