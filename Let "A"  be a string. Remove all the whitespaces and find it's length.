@@ -1,0 +1,4 @@
+A = input()
+list1 = A.split()
+new = ''.join(list1)
+print(len(new))
