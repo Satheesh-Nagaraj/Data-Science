@@ -1,0 +1,18 @@
+Given 2 arrays print 'yes' if they are mirror images of each other,otherwise 'no'.
+Input Size : N <= 1000000
+Sample Testcase :
+INPUT
+4
+1 2 3 4
+4 3 2 1
+OUTPUT
+yes
+
+
+n = int(input())
+n1 = list(map(int,input().split()))
+n2 = list(map(int,input().split()))
+if n1==n2[::-1]:
+    print("yes")
+else:
+    print("no")   
