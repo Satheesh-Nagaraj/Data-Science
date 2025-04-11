@@ -1,0 +1,28 @@
+card = input("Enter your card number: ")  # Treating card number as a string
+Balance = 10000
+
+if card == "987654321":
+    print("Valid card")
+    pin = input("Enter your pin number: ")
+    if pin == "1234":
+        print("Welcome")
+        ops = input("Enter D for deposit or W for withdraw: ")
+        if ops == "W" or ops == "w":
+            while True:
+                amount = int(input("Enter amount to withdraw: "))
+                if amount <= Balance:
+                    Balance -= amount
+                    print(f"Withdrawal successful. Remaining Balance: {Balance}")
+                    break  # Exit the loop after successful transaction
+                else:
+                    print("Invalid amount! Not enough balance. Please try again.")
+        elif ops == "D" or ops == "d":
+            amount = int(input("Enter amount to deposit: "))
+            Balance += amount
+            print(f"Deposit successful. Updated Balance: {Balance}")
+        else:
+            print("Invalid operation selected.")
+    else:
+        print("Invalid pin")
+else:
+    print("Invalid card number")
